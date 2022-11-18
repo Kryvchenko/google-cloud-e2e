@@ -13,11 +13,7 @@ describe('Cloud calculator', () => {
         expect(browser).toHaveUrlContaining(constants.URL);
     });
     it('should allow to fill up estimation form', async () => {
-        await browser.maximizeWindow();
-        // const frame1 = await FormComponent.iFrame;
-        await browser.switchToFrame(await FormComponent.iFrame);
-        // const frame2 = await FormComponent.iChildFrame;
-        await browser.switchToFrame(await FormComponent.iChildFrame);
+        await FormComponent.swithBetweenFrames();
         await FormComponent.fillUpCalculationForm();
         const responseArray = await EstimationComponent.getEstimationData();
         expect(responseArray[0,1,2,3,4]).toEqual(constants.DATA_ARRAY[0,1,2,3,4]);

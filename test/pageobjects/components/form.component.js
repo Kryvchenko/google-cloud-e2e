@@ -53,9 +53,11 @@ class FormComponent {
       return $("form[name='ComputeEngineForm'] button[aria-label='Add to Estimate']");
     }
     
-    // async goSwitchToFrame() {
-
-    // }
+    async swithBetweenFrames() {
+      await browser.maximizeWindow();
+      await browser.switchToFrame(await this.iFrame);
+      await browser.switchToFrame(await this.iChildFrame);
+    }
 
     async fillUpCalculationForm() {
       await utils.doClick(this.instancesInput);
