@@ -1,21 +1,39 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Git download') {
-            steps {
-                git 'https://github.com/Kryvchenko/google-cloud-calculator-e2e.git'
+  agent any
+  tools {nodejs "18.10.0"}
+  stages {
+    stage('preflight') {
+      steps {
+        script {
+            if (isUnix()) {
+                 sh 'node -v'
+            } else {
+                bat 'node -v'
             }
         }
-        stage('Install') {
-            steps {
-                bat encoding: 'ASCII', returnStatus: true, script: 'npm install'
-            }
-        }
-        stage('Run e2e test suites with browser') {
-            steps {
-                bat encoding: 'ASCII', returnStatus: true, script: 'npm run test'
-            }
-        }
+      }
     }
+    stage('build') {
+      steps {
+        script {
+        if (isUnix()) {
+                 sh 'npm install'
+            } else {
+                bat 'npm install'
+            }
+        }
+      }
+    }
+    stage('test') {
+      steps {
+        script {
+        if (isUnix()) {
+                 sh 'npm run test'
+            } else {
+                bat 'npm run test'
+            }
+       }
+      }
+    }
+  }
 }
