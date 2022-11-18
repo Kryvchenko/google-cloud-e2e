@@ -62,12 +62,12 @@ exports.config = {
         maxInstances: 2,
         browserName: 'chrome',
         acceptInsecureCerts: true
-       },
-       {
-        maxInstances: 2,
-        browserName: 'firefox',
-        acceptInsecureCerts: true
        }
+    //    {
+    //     maxInstances: 2,
+    //     browserName: 'firefox',
+    //     acceptInsecureCerts: true
+    //    }
      ],
     //
     // ===================
