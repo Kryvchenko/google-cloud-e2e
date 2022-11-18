@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio run ./wdio.conf.js",
+    "test": "ENV=qa npx wdio run ./wdio.conf.js",
     "report": "allure generate --clean allure-results && allure open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wdio/cli": "^7.26.0"
+    "@wdio/cli": "^7.26.0",
+    "@wdio/selenium-standalone-service": "^7.26.0"
   },
   "devDependencies": {
     "@wdio/allure-reporter": "^7.26.0",

@@ -34,15 +34,16 @@ class EmailComponent {
     }
     async sendEmailToExternalInbox() {   
         await browser.newWindow(constants.MAIL_BOX_URL);
+        await browser.pause(1000);
         const mailUrl = await browser.getUrl();
         const emailAdr = await utils.doGetText(this.EmailAdress);
-        await browser.switchWindow('/');
+        await browser.switchWindow("/");
         await browser.switchToFrame(await FormComponent.iFrame);
         await browser.switchToFrame(await FormComponent.iChildFrame);
         await utils.doSetValue(this.emailField, emailAdr);
         await doClick(this.sendEmailBtn);
         await browser.switchWindow(mailUrl);
-        await browser.setTimeout({implicit: 5000});
+        await browser.setTimeout({implicit: 2000});
         await utils.doClick(this.checkInboxBtn);
         await browser.switchToFrame(await this.mailServiceIframe);
     } 
