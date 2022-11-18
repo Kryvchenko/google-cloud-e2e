@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div[normalize-space()='NVIDIA Tesla P10']"
+}

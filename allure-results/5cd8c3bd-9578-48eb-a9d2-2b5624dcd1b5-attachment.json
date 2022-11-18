@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "md-option[id='select_option_201'] div[class='md-text ng-binding']"
+}

@@ -1,0 +1,132 @@
+{
+  "id": {
+    "sessionId": "34a06cc41a5689c56d2be1dff9a4bc17",
+    "error": {
+      "error": "no such element",
+      "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#cloud-site > devsite-iframe > iframe\"}\n  (Session info: chrome=107.0.5304.110)",
+      "stacktrace": "0   chromedriver                        0x0000000104d6aa88 chromedriver + 4123272\n1   chromedriver                        0x0000000104cf6778 chromedriver + 3647352\n2   chromedriver                        0x00000001049b8ac4 chromedriver + 248516\n3   chromedriver                        0x00000001049eef68 chromedriver + 470888\n4   chromedriver                        0x0000000104a21020 chromedriver + 675872\n5   chromedriver                        0x00000001049e2b10 chromedriver + 420624\n6   chromedriver                        0x00000001049e3c30 chromedriver + 425008\n7   chromedriver                        0x0000000104d3cae4 chromedriver + 3934948\n8   chromedriver                        0x0000000104d3ff24 chromedriver + 3948324\n9   chromedriver                        0x0000000104d40508 chromedriver + 3949832\n10  chromedriver                        0x0000000104d46b30 chromedriver + 3975984\n11  chromedriver                        0x0000000104d40b24 chromedriver + 3951396\n12  chromedriver                        0x0000000104d1b71c chromedriver + 3798812\n13  chromedriver                        0x0000000104d5d2f0 chromedriver + 4068080\n14  chromedriver                        0x0000000104d5d444 chromedriver + 4068420\n15  chromedriver                        0x0000000104d71450 chromedriver + 4150352\n16  libsystem_pthread.dylib             0x000000018ae4e06c _pthread_start + 148\n17  libsystem_pthread.dylib             0x000000018ae48e2c thread_start + 8\n"
+    },
+    "selector": "#cloud-site > devsite-iframe > iframe",
+    "parent": {
+      "sessionId": "34a06cc41a5689c56d2be1dff9a4bc17",
+      "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "chrome",
+        "browserVersion": "107.0.5304.110",
+        "chrome": {
+          "chromedriverVersion": "107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942})",
+          "userDataDir": "/var/folders/hx/27jmrjjx0cd_ktpm_gs9rx_w0000gp/T/.com.google.Chrome.khj0cF"
+        },
+        "goog:chromeOptions": {
+          "debuggerAddress": "localhost:56781"
+        },
+        "networkConnectionEnabled": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "mac os x",
+        "proxy": {},
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+          "implicit": 0,
+          "pageLoad": 300000,
+          "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify",
+        "webauthn:extension:credBlob": true,
+        "webauthn:extension:largeBlob": true,
+        "webauthn:virtualAuthenticators": true
+      },
+      "config": {
+        "specs": [
+          "./test/specs/**/*.js"
+        ],
+        "suites": {},
+        "exclude": [],
+        "logLevel": "info",
+        "logLevels": {},
+        "excludeDriverLogs": [],
+        "bail": 0,
+        "waitforInterval": 500,
+        "waitforTimeout": 10000,
+        "framework": "mocha",
+        "reporters": [
+          "spec",
+          "junit",
+          [
+            "allure",
+            {
+              "outputDir": "allure-results"
+            }
+          ]
+        ],
+        "services": [
+          "chromedriver"
+        ],
+        "maxInstances": 10,
+        "maxInstancesPerCapability": 100,
+        "filesToWatch": [],
+        "connectionRetryTimeout": 120000,
+        "connectionRetryCount": 3,
+        "execArgv": [],
+        "runnerEnv": {},
+        "runner": "local",
+        "specFileRetries": 0,
+        "specFileRetriesDelay": 0,
+        "specFileRetriesDeferred": false,
+        "reporterSyncInterval": 100,
+        "reporterSyncTimeout": 5000,
+        "cucumberFeaturesWithLineNumbers": [],
+        "autoCompileOpts": {
+          "autoCompile": true,
+          "tsNodeOpts": {
+            "transpileOnly": true
+          },
+          "babelOpts": {}
+        },
+        "mochaOpts": {
+          "timeout": 60000,
+          "ui": "bdd"
+        },
+        "jasmineOpts": {
+          "defaultTimeoutInterval": 10000
+        },
+        "cucumberOpts": {
+          "timeout": 10000
+        },
+        "onPrepare": [],
+        "onWorkerStart": [],
+        "onWorkerEnd": [],
+        "before": [],
+        "beforeSession": [],
+        "beforeSuite": [],
+        "beforeHook": [],
+        "beforeTest": [],
+        "beforeCommand": [],
+        "afterCommand": [],
+        "afterTest": [
+          null
+        ],
+        "afterHook": [],
+        "afterSuite": [],
+        "afterSession": [],
+        "after": [],
+        "onComplete": [],
+        "onReload": [],
+        "beforeFeature": [],
+        "beforeScenario": [],
+        "beforeStep": [],
+        "afterStep": [],
+        "afterScenario": [],
+        "afterFeature": [],
+        "baseUrl": "https://cloud.google.com/",
+        "_": [
+          "run"
+        ],
+        "$0": "/Users/Tiger/Desktop/testing practise/google-cloud/node_modules/.bin/wdio",
+        "config-path": "./wdio.conf.js",
+        "ignoredWorkerServices": []
+      }
+    },
+    "isReactElement": false
+  }
+}

@@ -1,0 +1,92 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1668779591010' stop='1668779595710'>
+    <name>Cloud calculator regular</name>
+    <title>Cloud calculator regular</title>
+    <test-cases>
+        <test-case start='1668779591010' status='passed' stop='1668779595021'>
+            <name>should allow to search for calculator</name>
+            <title>should allow to search for calculator</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.110'/>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.110'/>
+            </parameters>
+            <steps>
+                <step start='1668779591011' status='passed' stop='1668779595019'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='3f22e22c-466f-4185-94d1-f5e0a5cdfbcc-attachment.json' type='application/json' size='40'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1668779595021' status='broken' stop='1668779595709'>
+            <name>should allow to fill up estimation form</name>
+            <title>should allow to fill up estimation form</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.110'/>
+            </parameters>
+            <steps>
+                <step start='1668779595022' status='passed' stop='1668779595182'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='30cb329e-a3ea-49c0-9ada-97a075664461-attachment.json' type='application/json' size='57'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668779595183' status='passed' stop='1668779595201'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4c9ef759-ce7a-45f5-ba2e-f2a87d8f2996-attachment.json' type='application/json' size='81'/>
+                        <attachment title='Response' source='2923984e-d16d-4d22-aaf2-29c96486b09a-attachment.json' type='application/json' size='1718'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1668779595204' status='broken' stop='1668779595709'>
+                    <name>POST /session/:sessionId/frame</name>
+                    <title>POST /session/:sessionId/frame</title>
+                    <attachments>
+                        <attachment title='Request' source='c6b69d34-69df-4115-af43-d0853514ef4f-attachment.json' type='application/json' size='5345'/>
+                    </attachments>
+                    <steps>
+                        <step start='1668779595220' status='passed' stop='1668779595709'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='e8ea2875-a993-445d-9058-2b86dd008b39-attachment.png' type='image/png' size='1679370'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>invalid argument: missing 'ELEMENT'
+                  (Session info: chrome=107.0.5304.110)</message>
+                <stack-trace>invalid argument: invalid argument: missing 'ELEMENT'
+                  (Session info: chrome=107.0.5304.110)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async FormComponent.swithBetweenFrames (/Users/Tiger/Desktop/testing practise/google-cloud/test/pageobjects/components/form.component.js:58:7)
+                    at async Context.&lt;anonymous> (/Users/Tiger/Desktop/testing practise/google-cloud/test/specs/hurt-me.e2e.js:15:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

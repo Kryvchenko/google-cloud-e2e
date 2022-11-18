@@ -1,0 +1,141 @@
+{
+  "id": {
+    "sessionId": "2de2e8cb-77b2-4549-bd11-d9476847fd3b",
+    "elementId": "97685310-ec61-42c7-b0b9-fe93d65e21bb",
+    "element-6066-11e4-a52e-4f735466cecf": "97685310-ec61-42c7-b0b9-fe93d65e21bb",
+    "selector": "#cloud-site > devsite-iframe > iframe",
+    "parent": {
+      "sessionId": "2de2e8cb-77b2-4549-bd11-d9476847fd3b",
+      "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "firefox",
+        "browserVersion": "105.0.1",
+        "moz:accessibilityChecks": false,
+        "moz:buildID": "20220922151854",
+        "moz:geckodriverVersion": "0.32.0",
+        "moz:headless": false,
+        "moz:platformVersion": "22.1.0",
+        "moz:processID": 98033,
+        "moz:profile": "/var/folders/hx/27jmrjjx0cd_ktpm_gs9rx_w0000gp/T/rust_mozprofilensHZn7",
+        "moz:shutdownTimeout": 60000,
+        "moz:useNonSpecCompliantPointerOrigin": false,
+        "moz:webdriverClick": true,
+        "moz:windowless": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "MAC",
+        "proxy": {},
+        "se:cdp": "ws://192.168.0.10:4444/session/2de2e8cb-77b2-4549-bd11-d9476847fd3b/se/cdp",
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+          "implicit": 0,
+          "pageLoad": 300000,
+          "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify"
+      },
+      "config": {
+        "specs": [
+          "./test/specs/**/*.js"
+        ],
+        "suites": {},
+        "exclude": [],
+        "logLevel": "info",
+        "logLevels": {},
+        "excludeDriverLogs": [],
+        "bail": 0,
+        "waitforInterval": 500,
+        "waitforTimeout": 10000,
+        "framework": "mocha",
+        "reporters": [
+          "spec",
+          "junit",
+          [
+            "allure",
+            {
+              "outputDir": "allure-results"
+            }
+          ]
+        ],
+        "services": [
+          [
+            "selenium-standalone",
+            "edgedriver",
+            "geckodriver",
+            {
+              "drivers": {
+                "firefox": true,
+                "chrome": true,
+                "chromiumedge": true
+              }
+            }
+          ]
+        ],
+        "maxInstances": 10,
+        "maxInstancesPerCapability": 100,
+        "filesToWatch": [],
+        "connectionRetryTimeout": 120000,
+        "connectionRetryCount": 3,
+        "execArgv": [],
+        "runnerEnv": {},
+        "runner": "local",
+        "specFileRetries": 0,
+        "specFileRetriesDelay": 0,
+        "specFileRetriesDeferred": false,
+        "reporterSyncInterval": 100,
+        "reporterSyncTimeout": 5000,
+        "cucumberFeaturesWithLineNumbers": [],
+        "autoCompileOpts": {
+          "autoCompile": true,
+          "tsNodeOpts": {
+            "transpileOnly": true
+          },
+          "babelOpts": {}
+        },
+        "mochaOpts": {
+          "timeout": 60000,
+          "ui": "bdd"
+        },
+        "jasmineOpts": {
+          "defaultTimeoutInterval": 10000
+        },
+        "cucumberOpts": {
+          "timeout": 10000
+        },
+        "onPrepare": [],
+        "onWorkerStart": [],
+        "onWorkerEnd": [],
+        "before": [],
+        "beforeSession": [],
+        "beforeSuite": [],
+        "beforeHook": [],
+        "beforeTest": [],
+        "beforeCommand": [],
+        "afterCommand": [],
+        "afterTest": [
+          null
+        ],
+        "afterHook": [],
+        "afterSuite": [],
+        "afterSession": [],
+        "after": [],
+        "onComplete": [],
+        "onReload": [],
+        "beforeFeature": [],
+        "beforeScenario": [],
+        "beforeStep": [],
+        "afterStep": [],
+        "afterScenario": [],
+        "afterFeature": [],
+        "baseUrl": "https://cloud.google.com/",
+        "_": [
+          "run"
+        ],
+        "$0": "/Users/Tiger/Desktop/testing practise/google-cloud/node_modules/.bin/wdio",
+        "config-path": "./wdio.conf.js",
+        "ignoredWorkerServices": []
+      }
+    },
+    "isReactElement": false
+  }
+}

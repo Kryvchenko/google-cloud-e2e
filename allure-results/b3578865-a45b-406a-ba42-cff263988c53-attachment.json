@@ -1,0 +1,130 @@
+{
+  "id": {
+    "sessionId": "b0883018-1e24-4fd9-afc8-60afa5473f92",
+    "elementId": "27d599d8-e7b5-4e7c-8fcd-63fdde04178e",
+    "element-6066-11e4-a52e-4f735466cecf": "27d599d8-e7b5-4e7c-8fcd-63fdde04178e",
+    "selector": "#cloud-site > devsite-iframe > iframe",
+    "parent": {
+      "sessionId": "b0883018-1e24-4fd9-afc8-60afa5473f92",
+      "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "firefox",
+        "browserVersion": "105.0.1",
+        "moz:accessibilityChecks": false,
+        "moz:buildID": "20220922151854",
+        "moz:geckodriverVersion": "0.32.0",
+        "moz:headless": false,
+        "moz:platformVersion": "22.1.0",
+        "moz:processID": 96420,
+        "moz:profile": "/var/folders/hx/27jmrjjx0cd_ktpm_gs9rx_w0000gp/T/rust_mozprofileS3u64U",
+        "moz:shutdownTimeout": 60000,
+        "moz:useNonSpecCompliantPointerOrigin": false,
+        "moz:webdriverClick": true,
+        "moz:windowless": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "MAC",
+        "proxy": {},
+        "se:cdp": "ws://192.168.0.10:4444/session/b0883018-1e24-4fd9-afc8-60afa5473f92/se/cdp",
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+          "implicit": 0,
+          "pageLoad": 300000,
+          "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify"
+      },
+      "config": {
+        "specs": [
+          "./test/specs/**/*.js"
+        ],
+        "suites": {},
+        "exclude": [],
+        "logLevel": "info",
+        "logLevels": {},
+        "excludeDriverLogs": [],
+        "bail": 0,
+        "waitforInterval": 500,
+        "waitforTimeout": 10000,
+        "framework": "mocha",
+        "reporters": [
+          "spec",
+          "junit",
+          [
+            "allure",
+            {
+              "outputDir": "allure-results"
+            }
+          ]
+        ],
+        "services": [
+          "selenium-standalone"
+        ],
+        "maxInstances": 10,
+        "maxInstancesPerCapability": 100,
+        "filesToWatch": [],
+        "connectionRetryTimeout": 120000,
+        "connectionRetryCount": 3,
+        "execArgv": [],
+        "runnerEnv": {},
+        "runner": "local",
+        "specFileRetries": 0,
+        "specFileRetriesDelay": 0,
+        "specFileRetriesDeferred": false,
+        "reporterSyncInterval": 100,
+        "reporterSyncTimeout": 5000,
+        "cucumberFeaturesWithLineNumbers": [],
+        "autoCompileOpts": {
+          "autoCompile": true,
+          "tsNodeOpts": {
+            "transpileOnly": true
+          },
+          "babelOpts": {}
+        },
+        "mochaOpts": {
+          "timeout": 60000,
+          "ui": "bdd"
+        },
+        "jasmineOpts": {
+          "defaultTimeoutInterval": 10000
+        },
+        "cucumberOpts": {
+          "timeout": 10000
+        },
+        "onPrepare": [],
+        "onWorkerStart": [],
+        "onWorkerEnd": [],
+        "before": [],
+        "beforeSession": [],
+        "beforeSuite": [],
+        "beforeHook": [],
+        "beforeTest": [],
+        "beforeCommand": [],
+        "afterCommand": [],
+        "afterTest": [
+          null
+        ],
+        "afterHook": [],
+        "afterSuite": [],
+        "afterSession": [],
+        "after": [],
+        "onComplete": [],
+        "onReload": [],
+        "beforeFeature": [],
+        "beforeScenario": [],
+        "beforeStep": [],
+        "afterStep": [],
+        "afterScenario": [],
+        "afterFeature": [],
+        "baseUrl": "https://cloud.google.com/",
+        "_": [
+          "run"
+        ],
+        "$0": "/Users/Tiger/Desktop/testing practise/google-cloud/node_modules/.bin/wdio",
+        "config-path": "./wdio.conf.js",
+        "ignoredWorkerServices": []
+      }
+    },
+    "isReactElement": false
+  }
+}

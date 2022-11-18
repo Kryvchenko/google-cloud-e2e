@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//div[normalize-space()='2x375 GB']"
+}

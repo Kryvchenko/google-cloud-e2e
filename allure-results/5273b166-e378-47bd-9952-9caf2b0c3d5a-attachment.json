@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "form[name='ComputeEngineForm'] button[aria-label='Add to Estimate']"
+}

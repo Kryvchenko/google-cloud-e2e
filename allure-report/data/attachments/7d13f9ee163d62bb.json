@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "md-checkbox[aria-label='Add GPUs']"
+}
