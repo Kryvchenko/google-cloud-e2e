@@ -1,5 +1,6 @@
 module.exports = {
     URL: "cloud calculator",
+    MAIL_BOX_URL: "https://www.minuteinbox.com/",
   DATA_ARRAY: 
  [
      "Instance type: n1-standard-8", 
