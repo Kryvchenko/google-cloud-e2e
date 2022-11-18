@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Install') {
             steps {
-                sh encoding: 'ASCII', returnStatus: true, script: 'npm install'
+                bat encoding: 'ASCII', returnStatus: true, script: 'npm install'
             }
         }
         stage('Run e2e test suites with browser') {
             steps {
-                sh encoding: 'ASCII', returnStatus: true, script: 'npm run test'
+                bat encoding: 'ASCII', returnStatus: true, script: 'npm run test'
             }
         }
     }
