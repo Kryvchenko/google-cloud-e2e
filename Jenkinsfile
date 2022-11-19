@@ -31,7 +31,7 @@ pipeline {
       steps {
         script {
         if (isUnix()) {
-                 sh '$params.browser$ npm run hardcore'
+                 sh '${params.browser} npm run hardcore'
             } else {
                 bat '%params.browser% npm run hardcore'
             }
