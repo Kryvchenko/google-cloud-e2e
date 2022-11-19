@@ -1,14 +1,6 @@
 pipeline {
   agent any
   tools {nodejs "18.10.0"}
-  options([
-    parameters([
-      choice(
-        choices: ['BROWSER=chrome', 'BROWSER=firefox'], 
-        description: 'Please select the browser suitable for testing', 
-        name: 'browser')]
-        )]
-        )
   stages {
     stage('preflight') {
       steps {
@@ -32,16 +24,41 @@ pipeline {
         }
       }
     }
+     stage('choice') {
+      steps {
+        script {
+           properties([
+                parameters([
+                    choice (
+                        choices: ['chrome', 'firefox'], 
+                        name: 'BROWSER_SELECTION',
+                        description: 'Please select the browser suitable for testing'
+                          )]
+                        )]
+                    )
+        }
+      }
+    }
     stage('test') {
       steps {
         script {
         if (isUnix()) {
-                 sh '${params.browser} npm run hardcore'
+                 sh 'BROWSER=${browser} npm run hardcore'
             } else {
-                bat '%params.browser% npm run hardcore'
+                bat 'BROWSER=%browser% npm run hardcore'
             }
        }
       }
     }
   }
 }
+
+
+  properties([
+    parameters([
+      choice(
+        choices: ['BROWSER=chrome', 'BROWSER=firefox'], 
+        description: 'Please select the browser suitable for testing', 
+        name: 'browser')]
+        )]
+        )
