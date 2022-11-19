@@ -1,4 +1,4 @@
-properties([parameters([choice(choices:['BROWSER=chrome', 'BROWSER=firefox'], description: 'Please select the browser suitable for testing')])])
+properties([parameters([choice(choices:'BROWSER=chrome\nBROWSER=firefox', description: 'Please select the browser suitable for testing')])])
 
 pipeline {
   agent any
