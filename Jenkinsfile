@@ -24,7 +24,7 @@ pipeline {
         }
       }
     }
-     stage('choice') {
+     stage('browser choice') {
       steps {
         script {
            properties([
@@ -39,13 +39,28 @@ pipeline {
         }
       }
     }
+    stage('which test to run choice') {
+      steps {
+        script {
+           properties([
+                parameters([
+                    choice (
+                        choices: ['hardcore', 'hurt-me'], 
+                        name: 'TEST_SELECTION',
+                        description: 'Please select the test to run'
+                          )]
+                        )]
+                    )
+        }
+      }
+    }
     stage('test') {
       steps {
         script {
         if (isUnix()) {
-                 sh 'BROWSER=${BROWSER_SELECTION} npm run hardcore'
+                 sh 'BROWSER=${BROWSER_SELECTION} npm run ${TEST_SELECTION}'
             } else {
-                bat 'BROWSER=%BROWSER_SELECTION% npm run hardcore'
+                bat 'BROWSER=%BROWSER_SELECTION% npm run %TEST_SELECTION'
             }
        }
       }
