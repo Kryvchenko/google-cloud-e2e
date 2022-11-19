@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//div[@class='gs-title']//b[contains(text(),'Google Cloud Pricing Calculator')]"
-}

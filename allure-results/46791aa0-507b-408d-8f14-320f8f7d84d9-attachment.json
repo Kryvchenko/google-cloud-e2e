@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//td[normalize-space()='Google Cloud Price Estimate']"
-}

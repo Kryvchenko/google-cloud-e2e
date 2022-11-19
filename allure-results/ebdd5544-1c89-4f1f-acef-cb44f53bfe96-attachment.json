@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "Unable to locate element: //td[normalize-space()='Google Cloud Price Estimate']",
-  "stacktrace": "RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.jsm:404:5\nelement.find/</<@chrome://remote/content/marionette/element.js:291:16\nsend@https://mdn.r.worldssl.net/js/jquery.min.js:4:16838\najax@https://mdn.r.worldssl.net/js/jquery.min.js:4:13670\ntma.nactiPostu@https://mdn.r.worldssl.net/js/minuteinbox.min.js?time=310520191048:55:7\ntma.reset@https://mdn.r.worldssl.net/js/minuteinbox.min.js?time=310520191048:17:188\n"
-}

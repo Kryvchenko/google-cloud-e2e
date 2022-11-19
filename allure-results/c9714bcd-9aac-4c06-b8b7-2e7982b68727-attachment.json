@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "form > md-content > div > md-input-container > input[type='email']"
-}

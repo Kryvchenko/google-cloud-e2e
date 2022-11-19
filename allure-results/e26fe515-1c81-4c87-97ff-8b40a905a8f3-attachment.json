@@ -1,5 +1,0 @@
-{
-  "error": "no such element",
-  "message": "Unable to locate element: body > div:nth-child(2) > div:nth-child(4) > div > div.emailBlock > p.zavorky > span",
-  "stacktrace": "RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.jsm:404:5\nelement.find/</<@chrome://remote/content/marionette/element.js:291:16\n"
-}
