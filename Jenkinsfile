@@ -1,7 +1,7 @@
 
 
 pipeline {
-  properties([parameters([choice(choices: ['BROWSER=chrome', 'BROWSER=firefox'], description: 'Select browser', name: 'browser')])])
+  options([parameters([choice(choices: ['BROWSER=chrome', 'BROWSER=firefox'], description: 'Select browser', name: 'browser')])])
   agent any
   tools {nodejs "18.10.0"}
   stages {
