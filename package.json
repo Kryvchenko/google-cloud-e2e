@@ -1,13 +1,15 @@
 {
   "name": "google-cloud",
   "version": "1.0.0",
+  "aythor": "KRYO",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "ENV=qa npx wdio run ./wdio.conf.js",
     "hardcore": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hardcore.e2e.js",
     "hurt-me": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hurt-me.e2e.js",
-    "report": "allure generate --clean allure-results && allure open",
-    "clean-report": "rimraf allure-results && rimraf allure-report && rimraf report && rimraf screenshots/errors/*"
+    "report": "ENV=qa allure generate --clean allure-results && allure open",
+    "clean-report": "ENV=qa rimraf allure-results && rimraf allure-report && rimraf report && rimraf screenshots/errors/*"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +17,6 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@wdio/cli": "^7.26.0",
-    "allure-commandline": "^2.20.1",
-    "selenium-webdriver": "^4.6.1",
     "wdio-geckodriver-service": "^4.0.0"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "@wdio/mocha-framework": "^7.26.0",
     "@wdio/selenium-standalone-service": "^7.26.0",
     "@wdio/spec-reporter": "^7.26.0",
+    "allure-commandline": "^2.20.1",
     "chromedriver": "^107.0.3",
     "eslint": "^8.28.0",
     "wdio-chromedriver-service": "^8.0.0",
