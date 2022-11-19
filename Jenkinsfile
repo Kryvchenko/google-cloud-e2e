@@ -33,27 +33,19 @@ pipeline {
                         choices: ['chrome', 'firefox'], 
                         name: 'BROWSER_SELECTION',
                         description: 'Please select the browser suitable for testing'
-                          )]
-                        )]
-                    )
-        }
-      }
-    }
-    stage('which test to run choice') {
-      steps {
-        script {
-           properties([
-                parameters([
+                          ), 
                     choice (
                         choices: ['hardcore', 'hurt-me'], 
                         name: 'TEST_SELECTION',
                         description: 'Please select the test to run'
-                          )]
+                          )   
+                          ]
                         )]
                     )
         }
       }
     }
+
     stage('test') {
       steps {
         script {
