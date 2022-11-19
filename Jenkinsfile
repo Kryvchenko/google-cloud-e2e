@@ -54,11 +54,3 @@ pipeline {
 }
 
 
-  properties([
-    parameters([
-      choice(
-        choices: ['BROWSER=chrome', 'BROWSER=firefox'], 
-        description: 'Please select the browser suitable for testing', 
-        name: 'browser')]
-        )]
-        )
