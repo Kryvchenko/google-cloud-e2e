@@ -43,9 +43,9 @@ pipeline {
       steps {
         script {
         if (isUnix()) {
-                 sh 'BROWSER=${browser} npm run hardcore'
+                 sh 'BROWSER=${BROWSER_SELECTION} npm run hardcore'
             } else {
-                bat 'BROWSER=%browser% npm run hardcore'
+                bat 'BROWSER=%BROWSER_SELECTION% npm run hardcore'
             }
        }
       }
