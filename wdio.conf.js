@@ -1,10 +1,20 @@
 const url = require('./urls');
-const ENV = process.env.ENV
+const brws = require('./brw');
 
-if(!ENV || ! ['prod', 'qa', "dev"].includes(ENV)) {
+const {ENV} = process.env;
+
+if(!ENV || ! ["prod", "qa", "dev"].includes(ENV)) {
     console.log('Please pass the correct ENV value: ENV=prod|qa|dev')
     process.exit()
 }
+
+const {BROWSER} = process.env;
+
+if(!BROWSER || ! ["chrome", "firefox"].includes(BROWSER)) {
+    console.log('Please pass the correct BROWSER value: BROWSER=chrome|firefox|')
+    process.exit()
+}
+
 
 exports.config = {
     //
@@ -60,14 +70,14 @@ exports.config = {
     capabilities: [
         {
         maxInstances: 1,
-        browserName: 'chrome',
-        acceptInsecureCerts: true
-       },
-       {
-        maxInstances: 1,
-        browserName: 'firefox',
+        browserName: brws[process.env.BROWSER],
         acceptInsecureCerts: true
        }
+    //    {
+    //     maxInstances: 1,
+    //     browserName: 'firefox',
+    //     acceptInsecureCerts: true
+    //    }
      ],
     //
     // ===================

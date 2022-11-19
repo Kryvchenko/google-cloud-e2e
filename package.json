@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ENV=qa npx wdio run ./wdio.conf.js",
-    "report": "allure generate --clean allure-results && allure open"
+    "hardcore": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hardcore.e2e.js",
+    "hurt-me": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hurt-me.e2e.js",
+    "report": "allure generate --clean allure-results && allure open",
+    "clean-report": "rimraf allure-results && rimraf allure-report && rimraf report && rimraf screenshots/errors/*"
   },
   "keywords": [],
   "author": "",

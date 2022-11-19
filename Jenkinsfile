@@ -1,3 +1,5 @@
+properties([parameters([choice(choices:['BROWSER=chrome', 'BROWSER=firefox'], description: 'Please select the browser suitable for testing')])])
+
 pipeline {
   agent any
   tools {nodejs "18.10.0"}
@@ -28,9 +30,9 @@ pipeline {
       steps {
         script {
         if (isUnix()) {
-                 sh 'npm run test'
+                 sh '${params.BROWSER} npm run hardcore'
             } else {
-                bat 'npm run test'
+                bat '${params.BROWSER} npm run hardcore'
             }
        }
       }
