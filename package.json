@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@wdio/cli": "^7.26.0",
     "allure-commandline": "^2.20.1",
     "selenium-webdriver": "^4.6.1",
@@ -26,6 +27,7 @@
     "@wdio/selenium-standalone-service": "^7.26.0",
     "@wdio/spec-reporter": "^7.26.0",
     "chromedriver": "^107.0.3",
+    "eslint": "^8.28.0",
     "wdio-chromedriver-service": "^8.0.0",
     "wdio-edgedriver-service": "^2.0.0"
   }
