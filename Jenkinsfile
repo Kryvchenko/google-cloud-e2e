@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {nodejs "18.10.0"}
-  properties([parameters([choice(choices: ['BROWSER=chrome', 'BROWSER=firefox'], description: 'Please select the browser suitable for testing', name: 'browser')])])
+  options([parameters([choice(choices: ['BROWSER=chrome', 'BROWSER=firefox'], description: 'Please select the browser suitable for testing', name: 'browser')])])
   stages {
     stage('preflight') {
       steps {
