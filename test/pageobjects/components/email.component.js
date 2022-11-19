@@ -5,7 +5,7 @@ const { doClick } = require('../../utils/utils');
 
 class EmailComponent {
     get emailBtn() {
-        return $("//button[@id='email_quote']");
+        return $("//button[@aria-label='Email']");
     }
     get emailField() {
         return $("form > md-content > div > md-input-container > input[type='email']");
