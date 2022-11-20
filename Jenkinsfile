@@ -56,11 +56,11 @@ pipeline {
        }
       }
     } 
-    stage('artifacts') {
-      steps {
-         archiveArtifacts artifacts: '*.js', fingerprint: true
-      }
-    }  
+    // stage('artifacts') {
+    //   steps {
+    //      archiveArtifacts artifacts: '*.js', fingerprint: true
+    //   }
+    // }  
   }
 }
 
