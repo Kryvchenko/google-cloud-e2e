@@ -1,5 +1,6 @@
 const url = require('./urls');
 const brws = require('./brw');
+const brxsws = require('./reports/html-reports/');
 
 const {ENV} = process.env;
 
@@ -150,7 +151,19 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec','junit',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec','junit',['allure', {outputDir: 'allure-results'}],  
+      ["html-nice", {
+        outputDir: './reports/html-reports/',
+        filename: 'report.html',
+        reportTitle: 'Test Report Title',
+        linkScreenshots: true,
+        //to show the report in a browser when done
+        showInBrowser: false,
+        collapseTests: false,
+        //to turn on screenshots after every test
+        useOnAfterCommandForScreenshot: false,
+    }
+    ]],
 
 
     
