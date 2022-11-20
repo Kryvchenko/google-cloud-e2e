@@ -49,9 +49,9 @@ pipeline {
       steps {
         script {
         if (isUnix()) {
-                 sh 'BROWSER=${BROWSER_SELECTION} npm run ${TEST_SELECTION} && npm run report'
+                 sh 'BROWSER=${BROWSER_SELECTION} npm run ${TEST_SELECTION}'
             } else {
-                bat 'BROWSER=%BROWSER_SELECTION% npm run %TEST_SELECTION && npm run report'
+                bat 'BROWSER=%BROWSER_SELECTION% npm run %TEST_SELECTION'
             }
        }
       }
@@ -59,7 +59,6 @@ pipeline {
     stage('artifacts') {
       steps {
          archiveArtifacts artifacts: '*.js', fingerprint: true
-         allure 'allure-results/*.json'
       }
     }  
   }
