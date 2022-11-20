@@ -55,16 +55,13 @@ pipeline {
             }
        }
       }
-    }
-   stage('report') {
-     steps {
-        post {
-          always {
-            junit 'build/reports/**/*.xml'
-            }
-        }
-     }
-   } 
+    } 
+    stage('artifacts') {
+      steps {
+         archiveArtifacts artifacts: 'build/*.js', fingerprint: true
+         junit 'build/reports/**/*.xml'
+      }
+    }  
   }
 }
 
