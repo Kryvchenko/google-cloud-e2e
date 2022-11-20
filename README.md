@@ -7,6 +7,7 @@
 - Screenshot on fail with corresponding name and date 
 - Spec, Junit, and Allure reporters
 - Option to run from Jenkins with browser parametrization, selecting test suite
+- Test artefacts are archived 
 
 ## Structure
 
