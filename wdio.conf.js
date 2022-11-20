@@ -1,6 +1,6 @@
 const url = require('./urls');
 const brws = require('./brw');
-const brxsws = require('./reports/html-reports/');
+
 
 const {ENV} = process.env;
 
