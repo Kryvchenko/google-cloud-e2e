@@ -49,18 +49,19 @@ pipeline {
       steps {
         script {
         if (isUnix()) {
-                 sh 'BROWSER=${BROWSER_SELECTION} npm run ${TEST_SELECTION}'
+                 sh 'BROWSER=${BROWSER_SELECTION} npm run ${TEST_SELECTION} && npm run report'
             } else {
-                bat 'BROWSER=%BROWSER_SELECTION% npm run %TEST_SELECTION'
+                bat 'BROWSER=%BROWSER_SELECTION% npm run %TEST_SELECTION && npm run report'
             }
        }
       }
     } 
-    // stage('artifacts') {
-    //   steps {
-    //      archiveArtifacts artifacts: '*.js', fingerprint: true
-    //   }
-    // }  
+    stage('artifacts') {
+      steps {
+         archiveArtifacts artifacts: '*.js', fingerprint: true
+         allure 'allure-results/*.json'
+      }
+    }  
   }
 }
 
