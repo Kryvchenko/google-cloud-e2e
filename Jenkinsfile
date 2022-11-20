@@ -57,11 +57,13 @@ pipeline {
       }
     }
    stage('report') {
-    post {
-     always {
-      junit 'build/reports/**/*.xml'
+     steps {
+        post {
+          always {
+            junit 'build/reports/**/*.xml'
+            }
         }
-    }
+     }
    } 
   }
 }
