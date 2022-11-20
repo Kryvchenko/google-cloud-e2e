@@ -45,7 +45,6 @@ pipeline {
         }
       }
     }
-
     stage('test') {
       steps {
         script {
@@ -58,9 +57,8 @@ pipeline {
       }
     }
     post {
-       always {
-          archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-          junit 'build/reports/**/*.xml'
+     always {
+      junit 'build/reports/**/*.xml'
         }
     }
   }
