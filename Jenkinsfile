@@ -58,7 +58,7 @@ pipeline {
     } 
     stage('artifacts') {
       steps {
-         archiveArtifacts artifacts: 'build/*.js', fingerprint: true
+         archiveArtifacts artifacts: '*.js', fingerprint: true
          junit 'build/reports/**/*.xml'
       }
     }  
