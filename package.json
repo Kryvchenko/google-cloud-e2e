@@ -7,6 +7,10 @@
   "scripts": {
     "test": "ENV=qa npx wdio run ./wdio.conf.js",
     "hardcore": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hardcore.e2e.js",
+    "hardcore-chrome": "ENV=qa BROWSER=chrome npx wdio run wdio.conf.js --spec ./specs/hardcore.e2e.js",
+    "hardcore-firefox": "ENV=qa BROWSER=firefox npx wdio run wdio.conf.js --spec ./specs/hardcore.e2e.js",
+    "hurt-me-chrome": "ENV=qa BROWSER=chrome npx wdio run wdio.conf.js --spec ./specs/hurt-me.e2e.js",
+    "hurt-me-firefox": "ENV=qa BROWSER=firefox npx wdio run wdio.conf.js --spec ./specs/hurt-me.e2e.js",
     "hurt-me": "ENV=qa npx wdio run wdio.conf.js --spec ./specs/hurt-me.e2e.js",
     "report": "ENV=qa allure generate --clean allure-results && allure open",
     "clean-report": "ENV=qa rimraf allure-results && rimraf allure-report && rimraf report && rimraf screenshots/errors/*"
