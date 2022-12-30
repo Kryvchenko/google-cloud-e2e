@@ -70,7 +70,7 @@ class FormComponent {
     await this.gpuType.scrollIntoView();
     await utils.doClick(this.gpuType);
     await utils.doClick(this.selectGpuType);
-    // await browser.pause(1000);
+    await browser.pause(1000);
     await utils.doClick(this.numberOfGpu);
     await utils.doClick(this.selectNumberOfGpu);
     await utils.doClick(this.localSsd);

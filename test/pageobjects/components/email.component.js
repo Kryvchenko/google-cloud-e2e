@@ -5,25 +5,19 @@ const { doClick } = require("../../utils/utils");
 
 class EmailComponent {
   get emailBtn() {
-    return $(
-      "//button[@id='Email Estimate']/span[@class='google-symbols ng-scope']"
-    );
+    return $("//button[@id='Email Estimate']");
   }
   get emailField() {
-    return $(
-      "form > md-content > div > md-input-container > input[type='email']"
-    );
+    return $("input[type='email']");
   }
   get EmailAdress() {
-    return $(
-      "body > div:nth-child(2) > div:nth-child(4) > div > div.emailBlock > p.zavorky > span"
-    );
+    return $("#email");
   }
   get sendEmailBtn() {
-    return $("button[aria-label='Send Email']");
+    return $("md-dialog-actions button:last-child");
   }
   get checkInboxBtn() {
-    return $("//td[normalize-space()='Google Cloud Price Estimate']");
+    return $("//*[normalize-space()='Google Cloud Price Estimate']");
   }
   get mailServiceIframe() {
     return $("#iframeMail");
@@ -37,16 +31,27 @@ class EmailComponent {
   }
   async sendEmailToExternalInbox() {
     await browser.newWindow(constants.MAIL_BOX_URL);
-    await browser.pause(1000);
+    //await browser.pause(2000);
+    const emailAdr = await this.EmailAdress.waitUntil(
+      async function () {
+        return (await this.getText()) !== "Loading..."
+          ? await this.getText()
+          : "";
+      },
+      {
+        timeout: 3000,
+        timeoutMsg: "expected text to be different after 1sec"
+      }
+    );
     const mailUrl = await browser.getUrl();
-    const emailAdr = await utils.doGetText(this.EmailAdress);
+    //const emailAdr = await utils.doGetText(this.EmailAdress);
     await browser.switchWindow("/");
     await browser.switchToFrame(await FormComponent.iFrame);
     await browser.switchToFrame(await FormComponent.iChildFrame);
     await utils.doSetValue(this.emailField, emailAdr);
     await doClick(this.sendEmailBtn);
     await browser.switchWindow(mailUrl);
-    await browser.setTimeout({ implicit: 2000 });
+    // await browser.setTimeout({ implicit: 2000 });
     await utils.doClick(this.checkInboxBtn);
     await browser.switchToFrame(await this.mailServiceIframe);
   }

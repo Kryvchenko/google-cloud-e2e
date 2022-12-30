@@ -112,7 +112,7 @@ exports.config = {
   baseUrl: url[process.env.ENV],
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 10000,
+  waitforTimeout: 15000,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response
@@ -127,12 +127,11 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
   // services: ['chromedriver'],
   // services: ['selenium-standalone'],
-  services: [
-    [
-      "selenium-standalone",
-      { drivers: { firefox: true, chrome: true, chromiumedge: "latest" } }
-    ]
-  ],
+  services: ["chromedriver", "geckodriver"],
+  // [
+  //   "selenium-standalone",
+  //   { drivers: { firefox: true, chrome: true, chromiumedge: "latest" } }
+  // ]
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber

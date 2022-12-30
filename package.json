@@ -33,6 +33,7 @@
     "allure-commandline": "^2.20.1",
     "chromedriver": "^107.0.3",
     "eslint": "^8.28.0",
+    "geckodriver": "^3.2.0",
     "wdio-chromedriver-service": "^8.0.0",
     "wdio-edgedriver-service": "^2.1.0",
     "wdio-html-nice-reporter": "^8.0.6"
